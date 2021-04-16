@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "812366432382",
+    "project_id": "pinjamambulan",
+    "storage_bucket": "pinjamambulan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812366432382:android:611805ace7413474e6702f",
+        "android_client_info": {
+          "package_name": "com.nivestudio.pinjamambulan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "812366432382-8brdbra59d214151r4fh4hrlf0s1d79v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nivestudio.pinjamambulan",
+            "certificate_hash": "11de07de91ef521027cdf97050fb7319d7db6b37"
+          }
+        },
+        {
+          "client_id": "812366432382-irh0j99j1squd08q443db0crevsedh5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA67XZCZIO1iHZqvcyWYbC9cJpksuaSG-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "812366432382-irh0j99j1squd08q443db0crevsedh5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
