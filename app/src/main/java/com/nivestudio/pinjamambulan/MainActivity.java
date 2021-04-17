@@ -34,12 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     protected void onStart() {
         super.onStart();
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null){
             launchApp();
+            finish();
         }
 
     }
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void launchApp(){
         Intent intent = new Intent(this, HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-
     }
 }
