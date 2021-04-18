@@ -74,7 +74,7 @@ public class AdapterAmbulan extends RecyclerView.Adapter<AdapterAmbulan.AmbulanV
                 data.add("Telepon");
                 data.add("SMS");
                 new ActionSheet(context, data)
-                        .setTitle("Hubungi Melalui :")
+                        .setTitle("Hubungi "+dataList.get(position).getNamamobil()+" Melalui :")
                         .setCancelTitle("Cancel")
                         .setColorTitle(context.getResources().getColor(R.color.black))
                         .setColorTitleCancel(context.getResources().getColor(R.color.black))
