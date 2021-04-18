@@ -71,7 +71,6 @@ public class HomeActivity extends AppCompatActivity {
         sayHello.setText("Hello, "+getIntent().getStringExtra("nama"));
         ambulanArrayList = new ArrayList<>();
 
-
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
@@ -105,7 +104,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        data.add("Logout");
+        data.add("Keluar");
+        data.add("Informasi");
 
         EditText editText = (EditText) search.findViewById(androidx.appcompat.R.id.search_src_text);
         editText.setTextColor(Color.BLACK);
@@ -116,7 +116,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 new ActionSheet(HomeActivity.this,data)
-                        .setTitle("What do you want to do ?")
+                        .setTitle("Apa Yang Akan Kamu Lakukan ?")
                         .setCancelTitle("Cancel")
                         .setColorTitle(getResources().getColor(R.color.black))
                         .setColorTitleCancel(getResources().getColor(R.color.black))
@@ -138,6 +138,8 @@ public class HomeActivity extends AppCompatActivity {
                                                 finish();
                                             }
                                         });
+                                        break;
+                                    case "Informasi" :
                                         break;
                                 }
                             }

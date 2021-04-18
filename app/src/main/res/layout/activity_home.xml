@@ -76,7 +76,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
-        android:text="What Can I Help You ?"
+        android:text="Apa Yang Sedang Anda Cari ?"
         android:textColor="#AEA6A6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
