@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "812366432382-rh8g1dome93pa1b13dh1hk1nkbgs2ral.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nivestudio.pinjamambulan",
+            "certificate_hash": "1a0f87724525f4f423ce8ba1d0f576b21b5fafbe"
+          }
+        },
+        {
           "client_id": "812366432382-irh0j99j1squd08q443db0crevsedh5i.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -35,7 +43,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "812366432382-irh0j99j1squd08q443db0crevsedh5i.apps.googleusercontent.com",
+              "client_id": "812366432382-hqshivabsnus1san0m371ano8kkmds2u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
