@@ -125,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
                             @Override
                             public void data(@NotNull String s, int i) {
                                 switch (data.get(i)){
-                                    case "Logout" :
+                                    case "Keluar" :
 
                                         mGoogleSignInClient.revokeAccess().addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
