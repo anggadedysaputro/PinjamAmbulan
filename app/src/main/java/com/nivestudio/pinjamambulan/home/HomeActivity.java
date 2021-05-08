@@ -43,6 +43,7 @@ import com.nivestudio.pinjamambulan.MainActivity;
 import com.nivestudio.pinjamambulan.R;
 import com.nivestudio.pinjamambulan.adapter.AdapterAmbulan;
 import com.nivestudio.pinjamambulan.datamodel.DataModelAmbulan;
+import com.nivestudio.pinjamambulan.informasi.Informasi;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
@@ -68,6 +69,7 @@ public class HomeActivity extends AppCompatActivity {
         final Animation myanim = AnimationUtils.loadAnimation(this,R.anim.bounce);
         search = findViewById(R.id.search);
         sayHello = findViewById(R.id.sayHello);
+
         sayHello.setText("Hello, "+getIntent().getStringExtra("nama"));
         ambulanArrayList = new ArrayList<>();
 
@@ -140,6 +142,9 @@ public class HomeActivity extends AppCompatActivity {
                                         });
                                         break;
                                     case "Informasi" :
+                                        Intent intent = new Intent(HomeActivity.this, Informasi.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        startActivity(intent);
                                         break;
                                 }
                             }
@@ -156,8 +161,9 @@ public class HomeActivity extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-                adapter.filter(newText);
+                if(adapter!=null){
+                    adapter.filter(newText);
+                }
                 return false;
             }
         });

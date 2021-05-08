@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (mAuth.getCurrentUser() != null){
-            launchApp(mAuth.getCurrentUser().getDisplayName());
+            launchApp(mAuth.getCurrentUser().getDisplayName(), String.valueOf(mAuth.getCurrentUser().getPhotoUrl()));
         }
 
     }
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            launchApp(user.getDisplayName());
+                            launchApp(user.getDisplayName(), user.getPhotoUrl().toString());
                         } else {
                             // If sign in fails, display a message to the user.
                             AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
@@ -124,10 +124,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
-    private void launchApp(String nama){
+    private void launchApp(String nama, String photo){
         Intent intent = new Intent(this, HomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("nama",nama);
+        intent.putExtra("photo",photo);
         startActivity(intent);
         finish();
     }
